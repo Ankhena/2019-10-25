@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Составные условия и логические операторы</title>
+    <script>
+        var userName = prompt("Как тебя зовут?");
+        // if (userName === "") {
+        //     alert("Привет, безымянный человек!");
+        // } else if (userName === null) {
+        //     alert("Давай, до свидания!");
+        // } else {
+        //     alert("Привет, " + userName);
+        // }
+
+        if (userName !== "" && userName !== null) {
+            alert("Привет, " + userName);
+        } else if (userName === null) {
+            alert("Давай, до свидания!");
+        } else {
+            alert("Привет, безымянный человек!");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
