@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы</title>
+    <script>
+        var students = ["Ольга", "Вячеслав", "Анна", "Андрей", "Анна"];
+        // массив автоматически приводится к строке, в которой через запятую перечислены его элементы
+        // alert(students);
+        // вывод в консоль
+        console.log(students);
+        // отображение в виде таблицы
+        console.table(students);
+
+        var html = students.join("<br>");
+        console.log(html);
+        document.write(html);
+
+        // сортировка элементов массива по алфавиту
+        students.sort();
+
+        var listHtml = "<ul><li>" + students.join("</li><li>") + "</li></ul>";
+        document.write(listHtml);
+
+        // добавление в конец
+        students.push("Ещё один студент");
+        // длина массива изменилась
+        console.log(students.length);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

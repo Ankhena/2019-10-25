@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цикл for</title>
+    <script>
+        var n = 0;
+        console.log("Перед началом цикла n = " + n);
+        console.log("Перед началом цикла i = " + i);
+        for (var i=1; i<=5; i++) {
+            console.log("Сейчас n = " + n + ", а i = " + i);
+            n += i;
+            console.log("Теперь n = " + n + ", а i = " + i);
+        }
+        console.log("Цикл завершен");
+
+        console.log(n);
+
+        console.log("----------");
+        var prices = [1000, 500, 80, 99, 100];
+        var total = 0;
+        for (var i=0; i<prices.length; i++) {
+            total += prices[i];
+            console.log(total);
+        }
+        console.log("i после цикла =" + i);
+        console.log("Сумма товаров - " + total);
+
+        var students = ["Ольга", "Вячеслав", "Анна", "Андрей", "Анна", "Ещё студент", "И ещё один", "И много их"];
+        var level = 0;
+        for (var i=0; i<students.length; i++) {
+            level++;
+            document.write("<h" + level + ">" + students[i] + "</h"+ level +">");
+            if (level === 6) {
+                level = 0;
+            }
+        }
+
+
+        for (var i=0, level=1; i<students.length; i++, level++) {
+            document.write("<h" + level + ">" + students[i] + "</h"+ level +">");
+            if (level === 6) {
+                level = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
