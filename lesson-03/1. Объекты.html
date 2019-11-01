@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Знакомство с объектами</title>
+    <script>
+        var user = {
+          name: "John Snow",
+          age: 24,
+          email: "john@vesteros.com",
+          isAlive: true,
+          phones: ["+791112312312", "88121231212"],
+          address: {
+              country: "Vesteros",
+              city: "Winterfell",
+          },
+        };
+
+        // чтение свойства
+        alert(user.name);
+
+        // перезапись свойства
+        user.age++;
+
+        // добавление свойства
+        user.isKing = false;
+
+        console.log(user);
+        // alert(user);
+
+        var html = "<ul>";
+        for (var i=0; i<user.phones.length; i++) {
+            html += "<li>" + user.phones[i]  + "</li>";
+        }
+        html += "</ul>";
+
+        document.write(html);
+
+        var cat = {
+          name: "Барсик",
+          age: 2,
+          breed: "Британский вислоухий",
+          owner: user,
+        };
+
+        console.log(cat.owner.address.country);
+
+        // здесь создается новый объекта на основе объекта cat
+        var cat2 = Object.create(cat);
+        cat2.name = "Мурка";
+        console.log(cat2.name);
+        console.log(cat.name);
+
+        console.log(cat2);
+        // у второго кота нет собственного свойства breed (порода)
+        // поэтому браузер возьмет его у первого кота
+        // так происходит из-за создания объекта через Object.create
+        // первый кот стал прототипом второго, но об этом мы поговорим позднее :)
+        console.log(cat2.breed);
+
+        for (var prop in user) {
+            console.log(prop);
+        }
+
+
+        for (var param in cat2) {
+            // извлечение значения свойства объекта cat2
+            // по имени, которое хранится в переменной param
+            document.write(cat2[param] + " <br>");
+        }
+
+
+        var taxes = {
+          spb: 100,
+          moscow: 120,
+          sochi: 90,
+          rostov: 125,
+          krasnodar: 80,
+        };
+
+        var translations = {
+          spb: "Санкт-Петербург",
+          moscow: "Москва",
+          sochi: "Сочи",
+          rostov: "Ростов-на-Дону",
+        };
+
+        var tableHtml = "<table class=''>";
+
+        tableHtml += "<tr><th>Город</th><th>Тариф</th></tr>";
+        for (var city in taxes) {
+
+            // скопировали в переменную код города
+            var rusName = city;
+
+            // проверяем, есть ли перевод названия по этому коду
+            // если в объекте translations нет свойства с именем, равным значению переменной city
+            // то выражение translations[city] будет равно undefined
+            // следовательно, если translations[city] НЕ РАВНО undefined, значит перевод есть
+            if (translations[city] !== undefined) {
+                // перезаписываем переменную
+               rusName = translations[city];
+            }
+
+            tableHtml += "<tr><td>"+ rusName +"</td><td>" + taxes[city] +"</td></tr>";
+        }
+        tableHtml += "</table>";
+
+        document.write(tableHtml);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

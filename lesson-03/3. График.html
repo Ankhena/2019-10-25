@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика продаж</title>
+    <style>
+        .stat {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            border: 2px solid;
+            padding: 15px;
+            margin: 50px auto 0;
+            width: 450px;
+        }
+
+        .stat__item {
+            width: 70px;
+        }
+
+        .stat__title {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .stat__value {
+            background: #0000bd;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            animation: 1.5s growing 0.5s forwards;
+        }
+
+        @keyframes growing {
+            100% { transform: scaleY(1); }
+        }
+    </style>
+    <script>
+        var salesStat = [
+            { month: "март", sales: 200, },
+            { month: "апрель", sales: 480, },
+            { month: "май", sales: 160, },
+            { month: "июнь", sales: 515, }
+        ];
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы объектов</title>
+    <script>
+        var products = [
+            { title: "Macbook Pro", price: 249000, inStock: true, },
+            { title: "Lenovo Yoga", price: 89000, inStock: true, },
+            { title: "HP Pavillion", price: 39000, inStock: false, },
+            { title: "Asus", price: 32000, inStock: true, },
+        ];
+
+        var total = 0;
+        for (var i=0; i<products.length; i++) {
+            if (products[i].inStock) {
+                total += products[i].price;
+            }
+        }
+
+        console.log(total);
+        console.table(products);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
