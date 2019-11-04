@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Методы объектов</title>
+    <script>
+        var cat = {
+            name: "Барсик",
+                age: 2,
+                meow: function() {
+                console.log("Мяяяуууу!");
+            },
+            showInfo: function() {
+                console.log("Кличка кота: " + this.name + ", возраст: " + this.age);
+            },
+        };
+
+        // вызов метода
+        cat.meow();
+        // т.к. вызов происходит в контексте объекта cat, то и this в методе showInfo будет сам cat
+        cat.showInfo();
+
+        var cat2 = Object.create(cat);
+        cat2.name = "Мурка";
+        cat2.age = 3;
+
+        cat2.meow();
+        // здесь this будет cat2, т.к. вызов метода идёт в контексте cat2
+        cat2.showInfo();
+
+        var meow2 = cat2.meow;
+        // вызов в глобальном контексте
+        meow2();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

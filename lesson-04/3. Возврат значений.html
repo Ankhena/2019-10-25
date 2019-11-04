@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Возврат значений из функции</title>
+    <script>
+        var sum = function() {
+            var acc = 0;
+            for (var i=0; i<arguments.length; i++) {
+                acc += arguments[i];
+            }
+            return acc;
+            // код после ретурна уже никогда не сработает, т.е. выполнение функции остановлено
+            // alert(2314234);
+        };
+
+
+        var c = sum(5, 3, 2) / 2;
+
+        alert(sum(5, 3));
+
+        console.log("Результат: " + c);
+
+
+        var square = function(x) {
+            return x * x;
+        };
+
+        alert(square(5));
+
+        alert(square(sum(4, 2)));
+
+        var min = function(a, b) {
+            if (a > b) {
+                return a;
+            }
+
+            return b;
+        };
+
+        var max = function(a, b) {
+            if (a > b) {
+                return b;
+            }
+
+            return a;
+        };
+
+        var abs = function(x) {
+            if (x < 0) {
+                return -x;
+            }
+
+            return x;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

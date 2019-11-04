@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контекст вызова (this)</title>
+    <script>
+        var showName = function() {
+            alert(this.name);
+        };
+
+        var john = {
+            name: "John Doe",
+        };
+
+        var mary = {
+            name: "Mary Doe",
+        };
+
+        // вызов в глобальном контексте интерпретируется как window.showName();
+        // т.е. this - это служебный объект window
+        showName();
+        alert(window.name);
+
+
+        // здесь нет вызова функции, т.к. мы просто копируем значение переменной в свойство объекта
+        john.showName = showName;
+
+        // вызов в контексте объекта john, this === john
+        john.showName();
+
+
+        // сохранили функцию в свойство объекта, т.е. добавили метод
+        mary.test = function() {
+            console.log(this.name);
+        };
+
+        // вызов в контексте объекта mary
+        mary.test();
+    </script>
+</head>
+<body>
+
+
+<script>
+  //  alert(john.name);
+</script>
+</body>
+</html>

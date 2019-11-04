@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Аргументы функций</title>
+    <script>
+        var sum = function() {
+            console.log(arguments);
+            var acc = 0;
+            for (var i=0; i<arguments.length; i++) {
+                acc += arguments[i];
+            }
+
+            console.log("Расчитана сумма: " + acc);
+        };
+
+        sum(5, 3, 8, 4, 30);
+        sum(10, 20);
+
+        sum();
+
+        var hello = function(lang) {
+            if (lang === "en") {
+                alert("Hello World");
+            } else if (lang === "de") {
+                alert("Hallo Welt");
+            } else if (lang === "es") {
+                alert("Hola Mundo!");
+            } else {
+                alert("Привет, мир!");
+            }
+        };
+
+        hello("en");
+    </script>
+</head>
+<body>
+    <button onclick="hello('de');">Deutsch</button>
+</body>
+</html>
