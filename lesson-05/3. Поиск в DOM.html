@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск элементов в DOM</title>
+    <script>
+        window.onload = function() {
+            // в h1 будет либо null, либо объект
+            var h1 = document.querySelector("#title");
+            // var h1 = document.getElementById("title");
+            if (h1 !== null) {
+                h1.innerHTML = "Поменяли текст в скрипте";
+                h1.style.color = "green";
+            }
+
+            // querySelector всегда возращает максимум один элемент, даже если по селектору их найдено несколько
+            var test = document.querySelector(".test");
+            // изменяем inline-стили для элемента
+            test.style.color = "red";
+        };
+    </script>
+</head>
+<body>
+    <h1 id="title">Привет, мир!</h1>
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+</body>
+</html>

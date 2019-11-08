@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Значения из полей ввода</title>
+    <script>
+        window.onload = function() {
+            var input = document.querySelector(".number-input");
+            var calcBtn = document.querySelector(".calculate");
+            var result = document.querySelector(".result");
+
+            calcBtn.onclick = function() {
+               // isNaN вернёт false, если аргументом передано число
+               // можно сократить до
+               // if (!isNaN(input.value)) { ... }
+               if (isNaN(input.value) === false && input.value !== "") {
+                   var c = input.value * input.value;
+                   result.innerHTML = input.value + " в квадрате равно " + c;
+                   input.style.outline = null;
+                   result.style.color = null;
+               } else {
+                   input.style.outline = "2px solid red";
+                   result.innerHTML = "Введите число";
+                   result.style.color = "red";
+               }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input class="number-input" type="text">
+    <button class="calculate">Посчитать</button>
+    <output class="result"></output>
+</body>
+</html>

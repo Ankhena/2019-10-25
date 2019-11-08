@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обработка событий</title>
+    <script>
+        // onload - название события
+        // а функцию называют обработчиком или слушателем события (handler или listener)
+        window.onload = function() {
+            var hi = document.querySelector("#hi");
+            var counter = 0;
+            // эта функция будет обработчиком события onclick у элемента hi
+            // т.е. при каждом клике по кнопке браузер сам вызовет функцию
+            hi.onclick = function() {
+                alert("Привет!");
+                counter++;
+                // this === hi
+                this.innerHTML = "Кликнули <b>по</b> кнопке (" + counter + ")";
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="hi">Привет</button>
+</body>
+</html>

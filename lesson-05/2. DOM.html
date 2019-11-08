@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Объектная модель документа</title>
+    <script>
+        // у DOM-элемента изменяет свойство style, которое является объектом
+        // таким образом любому дом-элементу можно менять стили (они прописываются как inline-стили
+        // в атрибуте style)
+        window.onload = function() {
+            document.body.style.border = "2px solid red";
+            alert(document.body.innerHTML);
+            alert(document.body.tagName);
+
+            alert(document.body.children[0].tagName);
+            alert(document.body.children[1].innerHTML);
+
+            // выведет true
+            console.log(document.body.children[0] === document.body.firstElementChild);
+
+        };
+    </script>
+</head>
+<body>
+    <h1>Пример заголовка</h1>
+    <p>Ещё текст</p>
+</body>
+</html>
