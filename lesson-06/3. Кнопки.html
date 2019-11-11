@@ -4,7 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script>
+        window.onload = function() {
+            var buttons = document.querySelectorAll("button");
+            // buttons[0].style.color = "red";
+            // buttons[0].onclick = function() {};
 
+            for (var i=0; i<buttons.length; i++) {
+                buttons[i].style.color = "red";
+                buttons[i].onclick = function() {
+                    // понять, на какую именно кнопку кликнули можно через this
+                    alert(this.innerHTML);
+                };
+            }
+        };
 	</script>
 </head>
 <body>

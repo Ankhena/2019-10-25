@@ -12,9 +12,7 @@
         }
 	</style>
 
-	<script>
-
-	</script>
+	<script src="blog.js"></script>
 </head>
 <body>
 
@@ -45,5 +43,12 @@
 
         </div>
     </div>
+
+    <script type="text/x-template" id="postTemplateContainer">
+        <div class="card my-4">
+            <div class="card-header">{%username%}</div>
+            <div class="card-body">{%content%}</div>
+        </div>
+    </script>
 </body>
 </html>

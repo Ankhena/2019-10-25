@@ -5,7 +5,18 @@
 		<meta charset="utf-8" />
 		<script>
             window.onload = function() {
+                var popup = document.querySelector("#popup");
+                var showBtn = document.querySelector("#show");
 
+                showBtn.onclick = function() {
+                    popup.style.display = "block";
+                };
+
+                document.body.onkeydown = function(ev) {
+                    if (ev.key === "Escape") {
+                        popup.style.display = "none";
+                    }
+                };
             };
 		</script>
 		<style>
