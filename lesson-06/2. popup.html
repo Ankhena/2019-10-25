@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Всплывающие окна</title>
+		<meta charset="utf-8" />
+		<script>
+            window.onload = function() {
+
+            };
+		</script>
+		<style>
+			#popup {
+				position: fixed;
+				background: rgba(0,0,0,0.8);
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: none;
+			}
+
+			#popup_content {
+				margin: 100px auto;
+				width: 200px;
+				padding: 20px 40px;
+				border-radius: 5px;
+				border: 1px solid #eee;
+				background: #e4e4e4;
+				box-shadow: 0 0 9px rgba(0,0,0,0.8);
+				font-size: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>Это просто какой-то текст на нашей веб-странице</p>
+		<button id="show">Показать окно</button>
+
+		<div id="popup">
+			<div id="popup_content">
+				Оставьте свою электронную почту и мы вам перезвоним!
+			</div>
+		</div>
+	</body>
+</html>

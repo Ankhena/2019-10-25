@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<title>Микроблог</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+        .mycontainer {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+	</style>
+
+	<script>
+
+	</script>
+</head>
+<body>
+
+    <div class="mycontainer">
+        <h1 class="my-4">Микроблог</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="user-name">Ваше имя</label>
+                    <input
+                        class="form-control"
+                        autofocus
+                        id="user-name"
+                        placeholder="Введите текст сообщения...">
+                </div>
+                <div class="form-group">
+                    <label for="message">Ваше сообщение</label>
+                    <textarea
+                        class="form-control"
+                        id="message"
+                        rows="4"
+                        placeholder="Введите текст сообщения..."></textarea>
+                </div>
+                <button class="btn btn-primary" id="send">Отправить</button>
+            </div>
+        </div>
+        <div id="blog">
+
+        </div>
+    </div>
+</body>
+</html>
