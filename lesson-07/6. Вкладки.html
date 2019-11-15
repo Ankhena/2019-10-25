@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Табы</title>
+    <style>
+        .tabs {
+            border: 1px solid #111;
+            max-width: 600px;
+        }
+
+        .tabs__nav {
+            display: flex;
+            border-bottom: 2px solid #111;
+        }
+
+        .tabs-nav__link {
+            text-decoration: none;
+            color: #fff;
+            background: #111;
+            padding: 15px 30px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .tabs-nav__link--active {
+            background: #ff0;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .tabs__tab {
+            padding: 15px 30px;
+            display: none;
+        }
+
+        .tabs__tab--active {
+            display: block;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="tabs">
+        <nav class="tabs__nav">
+            <a class="tabs-nav__link tabs-nav__link--active" href="#tab-1">Вкладка 1</a>
+            <a class="tabs-nav__link" href="#tab-2">Вкладка 2</a>
+            <a class="tabs-nav__link" href="#tab-3">Вкладка 3</a>
+        </nav>
+        <div class="tabs__content">
+            <div class="tabs__tab tabs__tab--active" id="tab-1">
+                <h2>Это вкладка 1</h2>
+                <p>Это пример вкладки</p>
+                <p>Lorem ipsum dolor sit amet,фыв фыв фыв consectetur adipisicing elit. Aliquid cum in perferendis perspiciatis
+                    placeat similique soluta. Autem beatae eaque eum exercitationem id in nam optio, repudiandae
+                    placeat similique soluta. Autem beatae eaque eum exercitationem id in nam optio, repudiandae
+                    placeat similique soluta. Autem beatae eaque eum exercitationem id in nam optio, repudiandae
+                    placeat similique soluta. Autem beatae eaque eum exercitationem id in nam optio, repudiandae
+                    sed sit vel vitae?</p>
+            </div>
+            <div class="tabs__tab" id="tab-2">
+                <h2>Это вкладка 2</h2>
+                <p>Это пример вкладки</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum in perferendis perspiciatis
+                    placeat similique soluta. Aute фыв фыв фыв фывфыв фывв ыфm beatae eaque eum exercitationem id in nam optio, repudiandae
+                    sed sit vel vitae?</p>
+            </div>
+            <div class="tabs__tab" id="tab-3">
+                <h2>Это вкладка 3</h2>
+                <p>Это пример вкладки</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum in perferendis perspiciatis
+                    placeat similique soluta. Autem beatae eaque eum exercitationem id in nam optio, repudiandae
+                    sed sit vel vitae?</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
