@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test {
+			display: none;
+			max-width: 600px;
+			padding: 15px 30px;
+			background: #e9e9e9;
+			margin: 15px 0;
+			position: relative;
+		}
+
+		.show {
+			color: darkcyan;
+			text-decoration: none;
+			border-bottom: 1px dashed;
+		}
+
+		.show:hover {
+			border-bottom-color: transparent;
+		}
+
+		.hide {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 22px;
+			color: #ccc;
+			text-decoration: none;
+			padding: 8px 12px;
+		}
+
+		.hide:hover {
+			color: #888;
+		}
+	</style>
+	<script>
+        // var href = this.getAttribute("href");
+
+	</script>
+</head>
+<body>
+	<a class="show" href="#block-1">Показать блок 1</a>
+	<a class="show" href="#block-test">Показать блок 2</a>
+	<a class="show" href="#block-3">Показать блок 3</a>
+	<a class="show" href="#block-4">Показать блок 4</a>
+
+	<div class="test" id="block-1">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem accusantium aliquid eaque iste quae, modi nam
+        beatae, possimus tempora, ab, doloribus totam reiciendis! In nemo, fugit tempore doloribus deserunt modi.
+		<a href="#block-1" class="hide">x</a>
+	</div>
+
+	<div class="test" id="block-test">onsectetur adipisicing elit. Numquam, voluptatibus dolorem tempore obcaecati
+        dolores fuga aliquam, veniam saepe cupiditate earum nobis sequi sed enim placeat culpa natus nostrum, omnis
+        asperiores.<a href="#block-test" class="hide">x</a> </div>
+
+	<div class="test" id="block-3">in, deserunt velit dolorum atque sunt itaque dolores aspernatur explicabo praesentium
+        illum nisi.<a href="#block-3" class="hide">x</a></div>
+
+	<div class="test" id="block-4"> Nobis odit dolorem, accusantium fugit eveniet expedita aperiam quam omnis veritatis
+        facilis voluptatibus nemo praesentium saepe? Similique delectus magnam impedit fuga
+        non.<a href="#block-4" class="hide">x</a> </div>
+</body>
+</html>
