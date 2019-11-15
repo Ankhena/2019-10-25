@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обработчики событий</title>
+    <script>
+        window.onload = function() {
+            alert(1);
+        };
+
+        window.onload = function() {
+            alert(2);
+        };
+
+
+        window.addEventListener("load", function() {
+            alert(3);
+        });
+
+        window.addEventListener("load", function() {
+            alert(4);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

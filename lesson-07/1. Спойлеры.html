@@ -36,9 +36,33 @@
 		.hide:hover {
 			color: #888;
 		}
+
+        .block-visible {
+            display: block;
+        }
+
 	</style>
 	<script>
         // var href = this.getAttribute("href");
+        window.onload = function() {
+            var links = document.querySelectorAll(".show,.hide");
+            for (var i=0; links.length; i++) {
+                links[i].addEventListener("click", function() {
+                    var href = this.getAttribute("href");
+                    var block = document.querySelector(href);
+                    // if (this.classList.contains("show")) {
+                    //     // block.style.display = "block";
+                    //     block.classList.add("block-visible");
+                    // } else {
+                    //     // block.style.display = "none";
+                    //     block.classList.remove("block-visible");
+                    // }
+
+                    // toggle - добавляет класс, если его сейчас нет, и удаляет, если он есть
+                    block.classList.toggle("block-visible");
+                });
+            }
+        };
 
 	</script>
 </head>

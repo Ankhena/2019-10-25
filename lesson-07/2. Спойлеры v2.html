@@ -58,7 +58,14 @@
 	</style>
 	<script>
         window.onload = function() {
-
+            var links = document.querySelectorAll(".show,.hide");
+            for (var i=0; links.length; i++) {
+                links[i].onclick = function() {
+                    var href = this.getAttribute("href");
+                    var block = document.querySelector(href);
+                    block.classList.toggle("visible");
+                };
+            }
         };
 	</script>
 </head>
@@ -68,6 +75,7 @@
         <a class="show" href="#block-test">Показать блок 2</a>
         <a class="show" href="#block-3">Показать блок 3</a>
         <a class="show" href="#block-4">Показать блок 4</a>
+        <a class="show" href="#test-id-ololo">Еще блок</a>
     </nav>
 
 	<div class="test" id="block-1">
@@ -86,5 +94,8 @@
 	<div class="test" id="block-4"> Nobis odit dolorem, accusantium fugit eveniet expedita aperiam quam omnis veritatis
         facilis voluptatibus nemo praesentium saepe? Similique delectus magnam impedit fuga
         non.<a href="#block-4" class="hide">x</a> </div>
+
+    <div class="test" id="test-id-ololo"> 234234234234
+        non.<a href="#test-id-ololo" class="hide">x</a> </div>
 </body>
 </html>

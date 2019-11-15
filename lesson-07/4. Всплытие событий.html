@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Всплытие и делегирование событий</title>
+    <script>
+        window.addEventListener("load", function() {
+            var input = document.querySelector(".field");
+            var ul = document.querySelector(".list");
+
+            input.addEventListener("keydown", function(ev) {
+                if (ev.key === "Enter") {
+                    ul.innerHTML += "<li>" + this.value + "<button class='hide'>&times;</button></li>";
+                    this.value = "";
+                }
+            });
+
+            // делегирование события заключается в том, что обработчик прикрепляется к родительскому элементу
+            // но при возникновении события выполняется проверка, event.target и код выполняется только
+            // когда клик был на нужном потомке
+            // это позволяет прописать обработчики для тех элементов, которые отсутствовали на странице
+            // в момент загрузки
+            ul.addEventListener("click", function(ev) {
+                if (ev.target.classList.contains('hide')) {
+                    ev.target.parentElement.style.display = "none";
+                }
+            });
+
+            // ul.addEventListener("click", function(ev) {
+            //     alert("This: " + this.tagName + ", target:" + ev.target.tagName);
+            // });
+            //
+            // document.body.addEventListener("click", function(ev) {
+            //     alert("This: " + this.tagName + ", target:" + ev.target.tagName);
+            // });
+            //
+            // ul.firstElementChild.addEventListener("click", function(ev) {
+            //     // этот метод предотвращает всплытие событий
+            //     // ev.stopPropagation();
+            //     alert("This: " + this.tagName + ", target:" + ev.target.tagName);
+            // });
+
+        });
+    </script>
+    <style>
+        /*ul {*/
+        /*    background: #ff0;*/
+        /*}*/
+
+        /*li {*/
+        /*    background: #ccc;*/
+        /*}*/
+
+        /*body {*/
+        /*    border: 1px solid red;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<input type="text" class="field">
+<ul class="list"></ul>
+</body>
+</html>
